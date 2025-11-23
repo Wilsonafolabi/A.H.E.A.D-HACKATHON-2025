@@ -1,0 +1,31 @@
+/* REMOVE DEFAULT VITE LIMITS */
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  
+  /* This fixes the "Mobile Look" problem */
+  max-width: none !important; 
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #f8fafc;
+}
+
+/* Ensure the app takes full space */
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left; /* Default was center */
+}

@@ -1,0 +1,43 @@
+:root { --bg: #f0f2f5; --sidebar: #111827; --primary: #2563eb; --glass: #ffffff; --border: #e5e7eb; --danger: #ef4444; --success: #10b981; --text: #1f2937; }
+body { margin: 0; font-family: 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); overflow: hidden; }
+.app-shell { display: flex; height: 100vh; width: 100vw; }
+.sidebar { width: 260px; background: var(--sidebar); color: white; padding: 20px; display: flex; flex-direction: column; }
+.workspace { flex: 1; padding: 30px; overflow-y: auto; background: #f3f4f6; }
+.logo { font-size: 20px; font-weight: bold; color: var(--primary); margin-bottom: 40px; display: flex; align-items: center; gap: 10px; }
+.menu-item { padding: 12px 15px; margin-bottom: 5px; border-radius: 8px; cursor: pointer; color: #9ca3af; font-weight: 500; transition: 0.2s; }
+.menu-item:hover { background: rgba(255,255,255,0.1); color: white; }
+.menu-item.active { background: var(--primary); color: white; box-shadow: 0 4px 12px rgba(37,99,235,0.3); }
+.user-area { margin-top: auto; padding-top: 20px; border-top: 1px solid #374151; display: flex; justify-content: space-between; font-size: 14px; }
+.user-area button { background: none; border: none; color: var(--danger); cursor: pointer; }
+.glass-panel { background: var(--glass); border-radius: 12px; padding: 25px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); border: 1px solid var(--border); margin-bottom: 20px; }
+.fade-in { animation: fadeIn 0.4s ease-out; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+.file-view header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.file-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 20px; }
+.timeline { border-left: 2px solid var(--border); padding-left: 20px; margin-top: 15px; }
+.timeline-card { position: relative; margin-bottom: 20px; padding-bottom: 10px; }
+.timeline-card::before { content: ''; position: absolute; left: -26px; top: 0; width: 10px; height: 10px; background: var(--primary); border-radius: 50%; border: 2px solid white; }
+.timeline-card .date { font-size: 12px; font-weight: bold; color: #6b7280; margin-bottom: 5px; }
+.risk-tag { display: inline-block; background: #fee2e2; color: var(--danger); padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: bold; margin-top: 5px; }
+.chat-box { max-width: 700px; margin: 0 auto; height: 550px; display: flex; flex-direction: column; }
+.chat-scroll { flex: 1; overflow-y: auto; padding: 20px; background: #f9fafb; border-radius: 8px; margin-bottom: 15px; border: 1px solid var(--border); }
+.msg { padding: 10px 15px; border-radius: 8px; margin-bottom: 10px; max-width: 80%; font-size: 14px; }
+.msg.bot { background: white; border: 1px solid var(--border); align-self: flex-start; }
+.msg.user { background: var(--primary); color: white; margin-left: auto; box-shadow: 0 2px 4px rgba(37,99,235,0.2); }
+.input-row { display: flex; gap: 10px; }
+input, textarea { width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 8px; font-family: inherit; box-sizing: border-box; outline: none; transition: border 0.2s; }
+input:focus, textarea:focus { border-color: var(--primary); }
+textarea { resize: vertical; min-height: 80px; margin-bottom: 10px; }
+button { cursor: pointer; font-weight: 600; transition: 0.2s; }
+.btn-primary { background: var(--primary); color: white; border: none; padding: 10px 20px; border-radius: 8px; }
+.btn-primary:hover { background: #1d4ed8; }
+.btn-danger { background: var(--danger); color: white; border: none; padding: 8px 16px; border-radius: 8px; }
+.btn-ghost { background: white; border: 1px solid var(--border); color: var(--text); padding: 6px 12px; border-radius: 6px; }
+.full { width: 100%; }
+.alert { padding: 20px; border-radius: 8px; margin-top: 20px; border-left: 5px solid; }
+.alert.HIGH { background: #fef2f2; border-color: var(--danger); color: #991b1b; }
+.alert.LOW { background: #f0fdf4; border-color: var(--success); color: #166534; }
+.login-wrap { height: 100vh; display: flex; justify-content: center; align-items: center; background: #111827; }
+.login-box { background: white; padding: 40px; width: 320px; border-radius: 16px; text-align: center; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); }
+.login-box input { margin: 10px 0; }
+.login-box button { width: 100%; padding: 12px; background: var(--primary); color: white; border: none; border-radius: 8px; margin-top: 10px; }
